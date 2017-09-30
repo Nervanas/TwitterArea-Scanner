@@ -11,4 +11,9 @@ I don't want to say it, but to get this to work properly you need to do some  pr
 5. Fill in the data (you don't need 'Callback URL')
 6. Click on the 'Keys and Access Tokens' tab
 7. Copy the 'Consumer Key' and 'Consumer Secret'
------ *Attention: Do NOT publish this information, since your account can be taken over with that.. yes it's true.* -----
+
+*Attention: Do NOT publish this information, since your account can be taken over with that.. yes it's true.*
+
+8. Click on 'Create my access token'
+9. Copy the 'Access Token' and 'Access Secret'
+10. Fill up the missing parts within *Twiscan.py* and you're good to go.
