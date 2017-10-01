@@ -22,7 +22,6 @@ auth.set_access_token(access_token, access_secret)
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
-uids = []
 user = []
 
 for tweet in tweepy.Cursor(
@@ -37,9 +36,7 @@ for tweet in tweepy.Cursor(
     # Geo data i.e. "38.8976760,-77.0365300,10km"
     geocode = "",    
     ).items():
-    uids.append(tweet.author.id)
-
-for uid in uids:
+    authorid = tweet.author.id
     tuser = api.get_user(uid)
     tuser = tuser.screen_name
     user.append(tuser)
@@ -51,3 +48,5 @@ if len(user) > 0:
     print "[*] Found {0} Twitter user: ".format(len(user))
     for e in user:
         print e
+else:
+    print "[-] Didn't find any Twitter user with that criteria."
